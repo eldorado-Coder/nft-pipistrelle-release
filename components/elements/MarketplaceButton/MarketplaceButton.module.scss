@@ -1,0 +1,43 @@
+.container {
+  display: block;
+  background-color: flex;
+  background-image: radial-gradient(
+    circle farthest-corner at 8% 120%, 
+    var(--accent-color-darken5) 0%,
+    var(--accent-color-lighten5) 90%
+  );
+  border: 2px solid var(--accent-color-darken10);
+  box-shadow: 
+    rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, 
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 12px;
+  padding: 4px 14px 2px;
+  text-align: center;
+
+  transition: all 130ms ease-in;
+
+  &:hover {
+    transform: skew(4.8deg); // rotateY(5deg);
+
+    svg {
+      transform: skew(-4.8deg);
+    }
+  }
+
+  svg {
+    max-height: 37px;
+    max-width: 100%;
+    transition: all 130ms ease-in;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 0.9rem;
+  padding: 0 6px 5px 6px;
+  font-weight: 300;
+
+  &:empty {
+    display: none;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NFT Metaverse Game Website installation guide</title>
+  <style>
+    :root {
+      background-color: #eee;
+    }
+
+    body {
+      max-width: 760px;
+      margin: 34px auto;
+      padding: 8px 34px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    code {
+      padding: 4px 6px;
+      border-radius: 6px;
+      background-color: #eee;
+    }
+
+    pre {
+      padding: 4px 6px;
+      border-radius: 6px;
+      background-color: #eee;
+      max-width: 100%;
+      overflow: auto;
+    }
+
+    pre code {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!--README.md--><h1>NFT Metaverse Game Website Documentation <a id="contacts" href="#contacts">#</a></h1>
+<p>Thank you for purchasing my code. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="https://codecanyon.net/user/kriakiku">here</a>. Thanks so much!</p>
+<p><strong>Created:</strong> 31.12.2021<br />
+<strong>By:</strong> Jonas (kriakiku)<br />
+<strong>Email:</strong> dandies.coal0p@icloud.com</p>
+<h3>Contents</h3>
+<ul>
+<li><a href="#contacts">Contacts</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#deploy">Deploy (installation) guide</a></li>
+<li><a href="#credits">Sources and Credits</a></li>
+</ul>
+<h2>Configuration <a id="configuration" href="#configuration">#</a></h2>
+<h3>Application name, description &amp; Collection link</h3>
+<p><strong>File:</strong> <code>utils/configuration.ts</code></p>
+<p>The configuration file is used to set seo parameters and link to the collection.</p>
+<p>The project supports two marketplaces:</p>
+<ul>
+<li>OpenSea: https://opensea.io/collection/monstershelter<pre><code class="language-js">collection: {
+  type: 'opensea',
+  slug: 'monstershelter',
+  // You can request an API token on the page - https://docs.opensea.io/reference/request-an-api-key
+  apiToken: '2f6f419a083c46de9d83ce3dbe7db601',
+}
+</code></pre>
+</li>
+<li>Rarible: https://rarible.com/collection/0xccc441ac31f02cd96c153db6fd5fe0a2f4e6a68d/items<pre><code class="language-js">collection: {
+  type: 'rarible',
+  blockchain: 'ETHEREUM',
+  address: '0xccc441ac31f02cd96c153db6fd5fe0a2f4e6a68d'
+}
+</code></pre>
+</li>
+</ul>
+<h3>Content components</h3>
+<p><strong>Path:</strong> <code>components/stories</code></p>
+<p>You can easily change all the content displayed on the site in the stories react components.</p>
+<p>For your convenience, I have already filled the stories with example content.</p>
+<h3>Color theme</h3>
+<p><strong>File:</strong> <code>styles/variables.module.scss</code></p>
+<p>You can easily choose the colors for the site by editing the SCSS variables (<code>$primary-color</code>, <code>$accent-color</code>). Be aware of accessibility and set colors that are contrasting enough for white text.</p>
+<h3>Fonts</h3>
+<p><strong>Files:</strong> <code>styles/globals.scss</code>, <code>pages/_document.tsx</code></p>
+<p>First of all, connect the fonts you need in the file <code>pages/_document.tsx</code>.</p>
+<p>Next, you need to update CSS variables (<code>--base-font</code>, <code>--accent-font</code>) by specifying font information in the file <code>styles/globals.scss</code></p>
+<h2>Deploy (installation) guide <a id="deploy" href="#deploy">#</a></h2>
+<p><strong>Requirements:</strong>
+Node.js 12.22.0 or later;
+MacOS, Windows (including WSL), and Linux are supported;</p>
+<p>Below is the documentation from the official website Next.js <a href="https://nextjs.org/docs/deployment">(see original)</a>.</p>
+<h3>Vercel (Recommended)</h3>
+<p>The easiest way to deploy Next.js to production is to use the <a href="https://vercel.com/">Vercel platform</a> from the creators of Next.js. Vercel is a cloud platform for static sites, hybrid apps, and Serverless Functions.</p>
+<h4>Getting started</h4>
+<p>If you haven’t already done so, push your app to a Git provider of your choice: GitHub, GitLab, or BitBucket. Your repository can be private or public.</p>
+<p>Then, follow these steps:</p>
+<ol>
+<li>Sign up to Vercel (no credit card is required).</li>
+<li>After signing up, you’ll arrive on the “Import Project” page. Under “From Git Repository”, choose the Git provider you use and set up an integration. (Instructions: GitHub / GitLab / BitBucket).</li>
+<li>Once that’s set up, click “Import Project From …” and import your app. It auto-detects that your app is using Next.js and sets up the build configuration for you. No need to change anything — everything should work fine!</li>
+<li>After importing, it’ll deploy your app and provide you with a deployment URL. Click “Visit” to see your app in production.</li>
+</ol>
+<p>Congratulations! You’ve deployed your app! If you have questions, take a look at the Vercel documentation.</p>
+<h3>Static website generation</h3>
+<p>To generate a static HTML site run commands:</p>
+<pre><code class="language-bash">yarn install;
+echo &quot;UNOPTIMIZED_IMAGES=true&quot; &gt;&gt; .env;
+yarn build;
+yarn export;
+</code></pre>
+<p>The &quot;out&quot; folder will be generated.</p>
+<h3>Node.js Server</h3>
+<p><code>next build</code> builds the production application in the .next folder. After building, <code>next start</code> starts a Node.js server that supports hybrid pages, serving both statically generated and server-side rendered pages.</p>
+<h3>Docker Image</h3>
+<p>Next.js can be deployed to any hosting provider that supports Docker containers. You can use this approach when deploying to container orchestrators such as Kubernetes or HashiCorp Nomad, or when running inside a single node in any cloud provider.</p>
+<p>Dockerfile is already included in the project</p>
+<p>You can build your container with <code>docker build . -t my-next-js-app</code> and run it with <code>docker run -p 3000:3000 my-next-js-app</code>.</p>
+<h2>Sources and Credits <a id="credits" href="#credits">#</a></h2>
+<p>Thanks to all great people who are developing open source software.</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/next">next</a> (MIT) — The React Framework;</li>
+<li><a href="https://www.npmjs.com/package/react">react</a> (MIT) — JS library 4 building UI;</li>
+<li><a href="https://www.npmjs.com/package/sass">sass</a> (MIT) — CSS preprocessor;</li>
+<li><a href="https://www.npmjs.com/package/web-platform-alpha">web-platform</a> (MPL-2.0) — React SDK 4 build modern &amp; accessible interfaces;</li>
+<li><a href="https://www.npmjs.com/package/react-icons">react-icons</a> (MIT) — SVG icons;</li>
+<li><a href="https://www.npmjs.com/package/markdown-it">markdown-it</a> (MIT) — Markdown parser;</li>
+<li><a href="https://www.npmjs.com/package/husky">husky</a> (MIT) — A tool for working with commits during development;</li>
+</ul>
+<!--/README.md-->
+</body>
+</html>

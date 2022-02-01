@@ -1,0 +1,105 @@
+$containerHeight: 68px;
+
+.nav {
+  display: block;
+  position: sticky;
+  top: -1px;
+  z-index: 1000;
+  background-color: var(--primary-color-darken15);
+  // border-bottom: 1px solid var(--primary-color-lighten5);
+  margin-bottom: 8px;
+
+  @supports (backdrop-filter: blur(11px)) {
+    backdrop-filter: blur(11px);
+    background-color: var(--primary-color-darken15-opacity);
+    background: linear-gradient(180deg, 
+      var(--primary-color-darken15) 0%, 
+      var(--primary-color-darken15) 10%, 
+      var(--primary-color-darken15-opacity) 50%, 
+      var(--primary-color-darken15-opacity) 100%
+    );
+  }
+}
+
+.container {
+  display: grid;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  grid-template-columns: [logo] max-content [menu] auto [button] max-content;
+  align-items: center;
+  gap: 54px;
+  min-height: 44px;
+  overflow-x: auto;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 100%;
+  }
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  a {
+    text-shadow: unset;
+    font-weight: unset;
+  }
+}
+
+.logo {
+  grid-column: logo;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  margin-right: 6px;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-right: unset;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 12px 6px;
+  }
+}
+
+.button {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 6px 24px;
+  background-color: var(--accent-color);
+  background-image: radial-gradient(
+    circle farthest-corner at 8% 120%, 
+    var(--accent-color-darken5) 0%,
+    var(--accent-color-lighten5) 90%
+  );
+  background-size: 120% auto;
+  transition: background-position 300ms;
+  border: 1px solid var(--accent-color-darken10);
+  border-radius: 8px;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 
+    rgba(50, 50, 93, .25) 0 30px 60px -12px, 
+    rgba(0, 0, 0, .3) 0 18px 36px -18px;
+  
+  &:hover {
+    background-position: right center;
+  }
+}

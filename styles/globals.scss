@@ -1,0 +1,74 @@
+@import "~/styles/variables.module.scss";
+
+html,
+body {
+  --primary-color: #{$primary-color};
+  --primary-color-darken5: #{$primary-color-darken5};
+  --primary-color-darken10: #{$primary-color-darken10};
+  --primary-color-darken15: #{$primary-color-darken15};
+  --primary-color-darken15-opacity: #{$primary-color-darken15-opacity};
+  --primary-color-lighten5: #{$primary-color-lighten5};
+  --primary-color-lighten10: #{$primary-color-lighten10};
+  --primary-color-lighten15: #{$primary-color-lighten15};
+  --primary-color-lighten15-opacity: #{$primary-color-lighten15-opacity};
+
+  --accent-color: #{$accent-color};
+  --accent-color-darken5: #{$accent-color-darken5};
+  --accent-color-darken10: #{$accent-color-darken10};
+  --accent-color-darken15: #{$accent-color-darken15};
+  --accent-color-darken15-opacity: #{$accent-color-darken15-opacity};
+  --accent-color-lighten5: #{$accent-color-lighten5};
+  --accent-color-lighten10: #{$accent-color-lighten10};
+  --accent-color-lighten15: #{$accent-color-lighten15};
+  --accent-color-lighten15-opacity: #{$accent-color-lighten15-opacity};
+
+  --base-font: 'Readex Pro', Helvetica, Arial, sans-serif;
+  --base-letter-spacing: normal;
+  // --accent-font: 'Press Start 2P', cursive;
+  --accent-font: 'Creepster', cursive;
+  --accent-letter-spacing: 2px;
+
+
+  padding: 0;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin: 0;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+body, html, .base-text {
+  font-family: var(--base-font);
+  letter-spacing: var(--base-letter-spacing);
+}
+
+h1, h2 {
+  font-family: var(--accent-font);
+  letter-spacing: var(--accent-letter-spacing);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-shadow: 2px 2px 1px var(--accent-color-lighten10);
+  font-weight: bolder;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--accent-color-lighten10);
+}
+
+::-webkit-scrollbar {
+  background: var(--primary-color-darken5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color-darken10);
+}

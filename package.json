@@ -1,0 +1,50 @@
+{
+  "name": "nft-pipistrelle",
+  "version": "1.0.4",
+  "description": "NFT Metaverse Game Website",
+  "keywords": [
+    "nft",
+    "metaverse",
+    "game",
+    "website"
+  ],
+  "homepage": "https://themeforest.net/user/kriakiku",
+  "bugs": "https://github.com/kriakiku/nft-pipistrelle/issues",
+  "license": "SEE LICENSE IN https://codecanyon.net/licenses/standard",
+  "author": "Jonas Danilov <dandies.coal0p@icloud.com> https://codecanyon.net/user/kriakiku",
+  "repository": "github:kriakiku/nft-pipistrelle",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "lru-cache": "^6.0.0",
+    "markdown-it": "^12.3.0",
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-collapse": "^5.1.1",
+    "react-dom": "17.0.2",
+    "react-fast-marquee": "^1.2.1",
+    "react-icons": "^4.3.1",
+    "react-transition-group": "^4.4.2",
+    "sharp": "^0.29.3",
+    "web-platform-alpha": "0.0.1-alpha.20"
+  },
+  "devDependencies": {
+    "@types/lru-cache": "^5.1.1",
+    "@types/node": "17.0.0",
+    "@types/react": "17.0.37",
+    "@types/react-collapse": "^5.0.1",
+    "@types/react-transition-group": "^4.4.4",
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7",
+    "husky": "^7.0.4",
+    "sass": "^1.45.0",
+    "typescript": "4.5.4"
+  }
+}

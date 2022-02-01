@@ -1,0 +1,40 @@
+$primary-color: #a00359; // #d40577, #7a0000, #adab0f
+$primary-color-darken5: darken($primary-color, 4%);
+$primary-color-darken10: darken($primary-color, 11%);
+$primary-color-darken15: darken($primary-color, 16%);
+$primary-color-darken15-opacity: rgba($primary-color-darken15, 80%);
+$primary-color-lighten5: lighten($primary-color, 3%);
+$primary-color-lighten10: lighten($primary-color, 8%);
+$primary-color-lighten15: lighten($primary-color, 12%);
+$primary-color-lighten15-opacity: rgba($primary-color-lighten15, 80%);
+
+$accent-color: #0064e7;
+$accent-color-darken5: darken($accent-color, 4%);
+$accent-color-darken10: darken($accent-color, 11%);
+$accent-color-darken15: darken($accent-color, 16%);
+$accent-color-darken15-opacity: rgba($accent-color-darken15, 80%);
+$accent-color-lighten5: lighten($accent-color, 3%);
+$accent-color-lighten10: lighten($accent-color, 8%);
+$accent-color-lighten15: lighten($accent-color, 12%);
+$accent-color-lighten15-opacity: rgba($accent-color-lighten15, 80%);
+
+:export {
+  primaryColor: $primary-color;
+  primaryColorDarken5: $primary-color-darken5;
+  primaryColorDarken10: $primary-color-darken10;
+  primaryColorDarken15: $primary-color-darken15;
+  primaryColorDarken15Opacity: $primary-color-darken15-opacity;
+  primaryColorLighten5: $primary-color-lighten5;
+  primaryColorLighten10: $primary-color-lighten10;
+  primaryColorLighten15: $primary-color-lighten15;
+  primaryColorLighten15Opacity: $primary-color-lighten15-opacity;
+  accentColor: $accent-color;
+  accentColorDarken5: $accent-color-darken5;
+  accentColorDarken10: $accent-color-darken10;
+  accentColorDarken15: $accent-color-darken15;
+  accentColorDarken15Opacity: $accent-color-darken15-opacity;
+  accentColorLighten5: $accent-color-lighten5;
+  accentColorLighten10: $accent-color-lighten10;
+  accentColorLighten15: $accent-color-lighten15;
+  accentColorLighten15Opacity: $accent-color-lighten15-opacity;
+}

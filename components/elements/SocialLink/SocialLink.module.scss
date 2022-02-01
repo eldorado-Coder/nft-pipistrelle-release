@@ -1,0 +1,33 @@
+.content {
+  --size: 28px;
+  --icon: 1.2rem;
+  --translate: -2px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+
+  // background-color: var(--primary-color-darken5);
+  // border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  margin: 6px 6px 0 0;
+
+  transition: transform 500ms;
+
+  &:hover {
+    transform: translateY(var(--translate));
+  }
+
+  &--large {
+    --size: 34px;
+    --icon: 1.4rem;
+    --translate: -4px;
+    margin: 8px 8px 0 0;
+  }
+}
+
+.icon {
+  font-size: var(--icon);
+}

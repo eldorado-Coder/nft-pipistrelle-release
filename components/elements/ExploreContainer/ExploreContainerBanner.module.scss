@@ -1,0 +1,47 @@
+
+.banner {
+  --width: 330px;
+
+  @media screen and (max-width: 970px) {
+    --width: 230px;
+    margin-top: 14px;
+  }
+
+  &__main {
+    --translate-start: 0, -9px;
+    --translate-stop: 0, 4px;
+
+    animation: 5s infinite alternate levitation;
+    // transform-style: preserve-3d;
+
+    @media screen and (max-width: 970px) {
+      --translate-start: 0, -3px;
+    }
+  }
+
+  &__image {
+    display: flex;
+    max-width: var(--width);
+    background-color: var(--primary-color-darken15);
+    border-radius: 12px;
+    box-shadow: 
+      0 0 0 5px var(--primary-color-darken10),
+      rgba(0, 0, 0, 0.35) 0 5px 15px;
+
+    img {
+      border-radius: 12px;
+    }
+  }
+}
+
+
+@keyframes levitation {
+  from {
+    transform: translate(var(--translate-start)) skew(0deg) rotate(-1deg);
+  }
+
+  to {
+    transform: translate(var(--translate-stop)) skew(-0.8deg, -0.2deg) rotate(0.5deg);
+  }
+}
+
