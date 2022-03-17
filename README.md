@@ -2,9 +2,6 @@
 
 Thank you for purchasing my code. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form [here](https://codecanyon.net/user/kriakiku). Thanks so much!
 
-**Created:** 31.12.2021<br />
-**By:** Jonas (kriakiku)<br />
-**Email:** dandies.coal0p@icloud.com
 
 ### Contents
 
